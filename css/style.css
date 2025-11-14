@@ -1,12 +1,15 @@
 :root{
     --colour-primary: #B19D8F;
     --colour-primary-dark: #36302C;
-    --colour-background: #2E2824;
+    --colour-background: #11100F;
     --colour-text: #F5E2C8;
     --colour-accent: #D75404;
 }
 
 body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     font-family: monospace;
     background-color: var(--colour-background);
 }
