@@ -1,0 +1,28 @@
+:root{
+    --colour-primary: #B19D8F;
+    --colour-primary-dark: #36302C;
+    --colour-background: #2E2824;
+    --colour-text: #F5E2C8;
+    --colour-accent: #D75404;
+}
+
+body {
+    font-family: monospace;
+    background-color: var(--colour-background);
+}
+
+h1 {
+    color: var(--colour-accent);
+}
+
+h2 {
+    color: var(--colour-accent)
+}
+
+h3 {
+    color: var(--colour-primary)
+}
+
+p {
+    color: var(--colour-text);
+}
