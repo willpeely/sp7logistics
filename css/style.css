@@ -1,10 +1,15 @@
 /* COLOUR PALETTE */
-:root{
-    --colour-primary: #D75404;
-    --colour-secondary: #fbbe25;
-    --colour-background: #11100F;
-    --colour-text: #F5E2C8;
+:root {
+    --colour-primary: #D75404;           /* your orange - unchanged */
+    --colour-secondary: #ffdc3d;         /* yellow accent - kept */
+    --colour-dark-primary: #0F0E0D;      /* main dark background */
+    --colour-dark-secondary: #1A1817;    /* secondary dark bg / cards */
+    --colour-light-primary: #F5E2C8;     /* light text / highlights */
+    --colour-light-secondary: #ECECEC;   /* muted text / secondary bg if needed */
+    --colour-text-light: #F5E2C8;        /* readable light text on dark bg */
+    --colour-text-dark: #1D1B19;         /* dark text for light areas */
 }
+
 
 /* RESET */
 * {
@@ -18,8 +23,15 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-family: monospace;
-    background-color: var(--colour-background);
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--colour-dark-primary);
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
 }
 
 /* HEADERS */
@@ -31,28 +43,29 @@ h1 {
 h2 {
     font-size: clamp(2rem, 3vw, 4rem);
     color: var(--colour-primary);
+    margin-bottom: 2rem;
+    margin-top: 10rem;
 }
 
 h3 {
     font-size: clamp(1.5rem, 1.5vw, 3rem);
-    color: var(--colour-secondary)
+    color: var(--colour-light-primary)
 }
 
 /* TEXT */
 p {
     font-size: clamp(1rem, 1.5vw, 1.25rem);
-    color: var(--colour-text);
+    color: var(--colour-text-light);
 }
 
 a {
     text-decoration: none;
     font-size: clamp(1rem, 1.5vw, 1.25rem);
-    color: var(--colour-text);
+    color: var(--colour-text-light);
 }
 
 /* SEGMENTS */
 .segment {
-    border: 1px solid white;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -63,22 +76,32 @@ a {
 /* GRID */
 .grid {
     width: 80%;
-    border: 3px dashed blue;
     display: grid;
     grid-template-columns: 1fr;
-    justify-items: center;
+    justify-content: center;
+}
+
+#banner img {
+    width: 100%;
 }
 
 /* SERVICES */
 #services .grid {
     gap: 1rem;
+    margin-bottom: 5rem;
 }
 .service-card {
+    border-radius: 1rem;
+    background-color: var(--colour-dark-secondary);
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: 1px solid orange;
+    padding: 1rem;
+}
+.service-card img {
+    width: 5rem;
+    padding-bottom: 1rem;
 }
 
 #location {
@@ -86,7 +109,7 @@ a {
     display: flex;
     align-items: center;
     gap: 2rem;
-    margin: 3rem;
+    margin: 3rem 0 0 0;
 }
 
 #location img {
@@ -98,15 +121,27 @@ a {
     gap: 3rem;
 }
 #about-text p {
-    margin: 2rem;
+    margin: 0 2rem 2rem 2rem;
 }
 
 .feature {
     width: 100%;
     display: flex;
     align-items: center;
-    border: 1px solid orange;
+    justify-content: center;
+    gap: 2rem;
 }
+
+.feature img {
+    width: 3.5rem;
+}
+
+.feature-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 
 /* CONTACT */
 .contact-item {
@@ -127,6 +162,10 @@ a {
 
     .feature {
         flex-direction: column;
+    }
+
+    #location {
+        gap: 4rem;
     }
 
     #location img {
