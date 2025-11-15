@@ -1,15 +1,17 @@
 /* COLOUR PALETTE */
 :root {
-    --colour-primary: #D75404;           /* your orange - unchanged */
-    --colour-secondary: #ffdc3d;         /* yellow accent - kept */
-    --colour-dark-primary: #0F0E0D;      /* main dark background */
-    --colour-dark-secondary: #1A1817;    /* secondary dark bg / cards */
-    --colour-light-primary: #F5E2C8;     /* light text / highlights */
-    --colour-light-secondary: #ECECEC;   /* muted text / secondary bg if needed */
-    --colour-text-light: #F5E2C8;        /* readable light text on dark bg */
-    --colour-text-dark: #1D1B19;         /* dark text for light areas */
+    --accent: #EB5E28;
+    --accent-secondary: #ff8f62;
+    --dark-primary: #151010;
+    --dark-secondary: #131313;
+    --dark-tertiary: #454545;
+    --light-primary: #FFFCF2;
+    --light-secondary: #CCC5B9;
 }
 
+html {
+    font-size: 20px;
+}
 
 /* RESET */
 * {
@@ -22,157 +24,137 @@
 body {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: var(--colour-dark-primary);
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: var(--dark-primary);
 }
 
 header {
     display: flex;
     justify-content: center;
     width: 100%;
-    background-color: rgb(255, 255, 255);
+    background-color: white;
+    padding: 0.5rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 /* HEADERS */
 h1 {
     font-size: clamp(2.5rem, 4vw, 5rem);
-    color: var(--colour-primary);
+    color: var(--accent);
 }
 
 h2 {
     font-size: clamp(2rem, 3vw, 4rem);
-    color: var(--colour-primary);
+    color: var(--light-primary);
     margin-bottom: 2rem;
-    margin-top: 10rem;
 }
 
 h3 {
-    font-size: clamp(1.5rem, 1.5vw, 3rem);
-    color: var(--colour-light-primary)
+    font-size: clamp(1.4rem, 1.5vw, 3rem);
+    color: var(--light-primary);
+    margin-bottom: 2rem;
 }
+
+h4 {
+    font-size: clamp(1.4rem, 1.5vw, 3rem);
+    color: var(--light-primary);
+    margin-bottom: 2rem;
+}
+
 
 /* TEXT */
 p {
     font-size: clamp(1rem, 1.5vw, 1.25rem);
-    color: var(--colour-text-light);
+    color: var(--light-primary);
 }
 
 a {
     text-decoration: none;
     font-size: clamp(1rem, 1.5vw, 1.25rem);
-    color: var(--colour-text-light);
+    color: var(--light-primary);
 }
 
-/* SEGMENTS */
 .segment {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    padding: 1rem 0 1rem 0;
-}
-
-/* GRID */
-.grid {
-    width: 80%;
-    display: grid;
-    grid-template-columns: 1fr;
-    justify-content: center;
-}
-
-#banner img {
-    width: 100%;
-}
-
-/* SERVICES */
-#services .grid {
-    gap: 1rem;
-    margin-bottom: 5rem;
-}
-.service-card {
-    border-radius: 1rem;
-    background-color: var(--colour-dark-secondary);
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    margin-bottom: 4rem;
     padding: 1rem;
 }
-.service-card img {
-    width: 5rem;
-    padding-bottom: 1rem;
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;    
+    gap: 5rem;
+    margin: 2rem;
 }
 
-#location {
-    width: 90%;
-    display: flex;
-    align-items: center;
-    gap: 2rem;
-    margin: 3rem 0 0 0;
-}
-
-#location img {
-    width: 10rem;
-}
-
-/* ABOUT */
-#about .grid {
-    gap: 3rem;
-}
-#about-text p {
-    margin: 0 2rem 2rem 2rem;
-}
-
-.feature {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 2rem;
-}
-
-.feature img {
-    width: 3.5rem;
-}
-
-.feature-header {
+.grid-cell {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
 }
 
+.grid-image {
+    display: flex;
+    padding: 1.1rem;
+    border-radius: 50%;
+    background-color: var(--accent);
+    margin-bottom: 2rem;
+}
 
-/* CONTACT */
+.grid img {
+    width: 5rem;
+}
+
+.grid p {
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+#about-text {
+    margin-bottom: 4rem;
+}
+
+
 .contact-item {
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
+}
+
+.contact-item p {
+    margin-bottom: 2rem;
+}
+
+#banner {
+    width: 100%;
+    height: 40vh; /* banner height */
+    background: url("/images/motorway.jpg") center/cover no-repeat;
+    position: relative;
+    display: flex;
     justify-content: center;
+    align-items: center;
 }
 
-/* --------------- FOR BIGGER SCREENS --------------- */
-
-@media(min-width: 786px) {
-
-    /* SERVICES */
-    .grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
-
-    .feature {
-        flex-direction: column;
-    }
-
-    #location {
-        gap: 4rem;
-    }
-
-    #location img {
-        width: 20rem;
-    }
-
-    #about-text p {
-        margin: 2rem 20rem 2rem 20rem;
-    }
+.banner-content {
+    position: relative; /* keep content above any overlay */
+    text-align: center;
 }
+
+.banner-content h2 {
+    font-size: 3rem;
+    color: white;
+}
+
+
+
+
+
+
+
+
