@@ -4,129 +4,141 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SP7 Logistics</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style-3.css">
 </head>
-
 <body>
 
     <!-- Header -->
     <header>
-        <h1>SP7 Logistics</h1>
+
+        
+        <div id="menu-btn">☰</div>
+
+            <nav id="side-menu">
+                <ul>
+                    <li><a href="#banner">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#why-choose-us">Why Choose Us</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+
+        <div id="logo">
+            <h1>SP7 <span id="logistics">LOGISTICS</span></h1>
+        </div>
+
+        
+
+        
     </header>
 
     <!-- Main Content -->
     <main>
-        <!-- Banner -->
-        <section id="banner">
-            <div class="banner-content">
-                <h2>Banner Header</h2>
-                <p>Banner tagline.</p>
+        <!-- Services -->
+        <section class="segment" id="services">
+            <div class="segment-header">      
+                <h2>OUR SERVICES</h2>
+                <h3>Expert courier services provided just for you...</h3>
+            </div>
+
+            <div class="service-boxes">
+                
+                <section class="service-box">
+                    <div class="service-box-image">
+                        <img src="images/truck.png">
+                    </div>
+                    <div class ="service-box-content">
+                        <h4>SAME DAY DELIVERY</h4>
+                        <p class="tag">For your urgency</p>
+                        <p class="description">
+                            Our Same Day Delivery service ensures your urgent shipments reach their destination quickly and safely. From pickup to drop-off, we provide fast, reliable, and professional handling, giving you peace of mind that your items will arrive on time, every time.
+                        </p>
+                    </div>
+                </section>
+
+                <section class="service-box">
+                    <div class="service-box-image">
+                        <img src="images/calendar.png">
+                    </div>
+                    <div class ="service-box-content">
+                        <h4>SCHEDULED DELIVERY</h4>
+                        <p class="tag">For your convenience</p>
+                        <p class="description">Our scheduled delivery service ensures your packages arrive exactly when you need them. Book in advance at your convenience and trust our professional team to handle your items with care, providing a reliable and timely service tailored to your schedule.</p>
+                    </div>
+                </section>
+
+                <section class="service-box">
+                    <div class="service-box-image">
+                        <img src="images/moon-cloud.png">
+                    </div>
+                    <div class ="service-box-content">
+                        <h4>OVERNIGHT DELIVERY</h4>
+                        <p class="tag">For your time</p>
+                        <p class="description">With our overnight delivery service, your urgent items reach their destination by the next business day. We prioritize speed without compromising safety, offering peace of mind for time-sensitive shipments that require swift and secure transport.</p>
+                    </div>
+                </section>
+
             </div>
         </section>
 
-        <!-- Services -->
-        <section class="segment" id="services">
-            <h2>Services</h2>
-            <h3>Expert courier service provided just for you...</h3>
-
-            <div class="grid">
-
-                <section class="grid-cell">
-                    <div class="grid-image">
-                        <img src="images/person-2.png">
-                    </div>
-                <h4>UK-wide Delivery</h4>
-                <p>UK-wide delivery for longer journeys.</p>
-
-                <p>Ensuring your items travel safely and arrives on schedule no matter the distance.</p>
-                </section>
-
-                <section class="grid-cell">
-                    <div class="grid-image">
-                        <img src="images/person-2.png">
-                    </div>
-                <h4>Valuable Packages</h4>
-                <p>Careful handling for valuables and delicate items.</p>
-                <p>Secure transport to keep your package protected.</p>
-                </section>
-
-                <section class="grid-cell">
-                    <div class="grid-image">
-                        <img src="images/person-2.png">
-                    </div>
-                <h4>Urgent Deliveries</h4>
-                <p>Fast, priority delivery for time-critical items.</p>
-                <p>Quick response times to guaruntee your package arrives as soon as possible.</p>
-                </section>
-
+        <!-- Why Choose Us -->
+        <section class="segment" id="why-choose-us">
+            <div class="segment-header">
+                <h2>WHAT WE OFFER</h2>
+                <h3>Reasons to choose us for your courier needs...</h3>
             </div>
+            
+            <ul class="icon-list">
+                <li>
+                    <h4>VERFIED, PROFESSIONAL COURIERS</h4>
+                    <p class="tag">Our couriers are fully vetted, trained, and trusted.</p>
+                    <p class="description">You can rely on us to represent your business with the highest standards while keeping your items safe and secure.</p>
+                </li>
+                <li>
+                    <h4>FAST AND SECURE DELIVERY SOLUTIONS</h4>
+                    <p class="tag">We provide efficient, high-speed delivery options.</p>
+                    <p class="description">Our processes are built around reliability, transparency, and complete peace of mind.</p>
+                </li>
+                <li>
+                    <h4>HIGH-QUALITY, COMPETITIVE RATES</h4>
+                    <p class="tag">We offer premium delivery services for lower prices.</p>
+                    <p class="description">Our pricing is fair, transparent, and designed to give you exceptional value without compromising speed, safety, or service quality.</p>
+                </li>
+                <li>
+                    <h4>HANDLED WITH GENUINE CARE</h4>
+                    <p class="tag">Every delivery is treated with genuine care and attention.</p>
+                    <p class="description">From collection to drop-off, we ensure secure handling, careful transport, and friendly customer-focused service at every step.</p>
+                </li>
+            </ul>
         </section>
 
         <!-- Contact -->
         <section class="segment" id="contact">
-            <h2>Contact</h2>
-            <h3>Get in touch for a premium experience...</h3>
-
-            <div class="contact-item">
-                <h3>Email</h3>
-                <p><a href="mailto:emailexample@email.com">emailexample@email.com</a></p>
+            <div class="segment-header">
+                <h2>CONTACT US</h2>
+                <h3>Get in touch for a premium experience...</h3>
             </div>
+            <div class="contact-items">
 
-            <div class="contact-item">
-                <h3>Phone</h3>
-                <p><a href="tel:+44123456789">+44 1234 56789</a></p>
+                <a class="contact-item" href="mailto:emailexample@email.com">
+                    <img src="images/email.png">
+                    <p>emailexample@email.com</p>
+                </a>
+
+                <a class="contact-item" href="tel:+44 12345 6789">
+                    <img src="images/phone.png">
+                    <p>+44 12345 6789</p>
+                </a>
             </div>
-        </section>
+        </section>        
 
-        <!-- About -->
-        <section class="segment" id="about">
-
-            <h2>About</h2>
-            <div id="about-text">
-                <p>
-                    Explore services for sending items from the UK and all about and around yes this is such a cool thing you should use sp7logiustics today we always guaruntee packages arriving, indepednt courier private premium service just for you.
-                </p>
-            </div>
-
-            <div class="grid">
-
-                <section class="grid-cell">
-                    <div class="grid-image">
-                        <img src="images/person-2.png">
-                    </div>
-                    <h4>Verified</h4>
-                    <p>Fully vetted and verified.</p>
-                    <p>Trustworthy service with complete transparency and professionalism in every delivery.</p>
-                </section>
-
-                <section class="grid-cell">
-                    <div class="grid-image">
-                        <img src="images/person-2.png">
-                    </div>
-                    <h4>Reliable</h4>
-                    <p>Reliable transport you can count on.</p>
-                    <p>Consistent, and committed to delivering exactly as promised.</p>
-                </section>
-
-                <section class="grid-cell">
-                    <div class="grid-image">
-                        <img src="images/person-2.png">
-                    </div>
-                    <h4>Personal</h4>
-                    <p>A personal, one-to-one courier service.</p>
-                    <p>Your package is treated with care, attention, and direct communication from start to finish.</p>
-                </section>
-                
-
-            </div>
-        </section>
-
-        
     </main>
 
     <footer>
         <p>&copy; 2025 SP7 Logistics. All rights reserved</p>
     </footer>
+
+    <script src="js/main.js"></script>
     
 </body>
 </html>
