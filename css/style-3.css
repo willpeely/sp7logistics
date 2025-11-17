@@ -4,9 +4,9 @@
 :root 
 {
     /* Accent colors */
-    --accent: #ef690a;
+    --accent: #F36C1B;
     --accent-secondary: #FF9635;
-    --logistics: rgb(199, 199, 199);
+    --logistics: #A6A6A6;
     --header-footer: #1B1D21;
     --side-bar: #d0d0d0;
 
@@ -272,8 +272,7 @@ header
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap: 5rem;
-    padding: 4rem 4rem;
+    gap: 2rem;
 }
 
 #banner-tag 
@@ -311,7 +310,7 @@ header
 
 #banner-image img 
 {
-    width: clamp(180px, 30vw, 320px);
+    width: clamp(180px, 30vw, 600px);
     object-fit: contain;
 }
 
