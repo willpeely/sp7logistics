@@ -6,6 +6,9 @@
     /* Accent colors */
     --accent: #ef690a;
     --accent-secondary: #FF9635;
+    --logistics: rgb(199, 199, 199);
+    --header-footer: #1B1D21;
+    --side-bar: #d0d0d0;
 
     /* Light theme */
     --light-primary: #1B1D21;
@@ -23,12 +26,11 @@
 
 [data-theme="dark"] 
 {
-    --accent: #ef690a;
-    --accent-secondary: #FF9635;
-
     --light-primary: #F4F7FA;
     --light-secondary: #DDE6EE;
     --light-tertiary: #DDE6EE;
+    --header-footer: #0e1218;
+    --side-bar: #2C3444;
 
     --dark-primary: #151b25;
     --dark-secondary: #1A202C;
@@ -87,7 +89,7 @@ header
     padding: 0 2rem;
     position: sticky;
     top: 0;
-    background-color: var(--dark-secondary);
+    background-color: var(--header-footer);
     z-index: 1000;
     box-shadow: var(--shadow);
 }
@@ -113,7 +115,7 @@ header
 
 #logistics 
 {
-    color: var(--accent-secondary);
+    color: var(--logistics);
 }
 
 /* Theme switch */
@@ -189,7 +191,7 @@ header
     left: -250px;
     height: 100%;
     width: 250px;
-    background-color: var(--dark-secondary);
+    background-color: var(--side-bar);
     padding-top: 6rem;
     transition: 0.3s ease;
     z-index: 1500;
@@ -212,7 +214,7 @@ header
 
 #side-menu a 
 {
-    font-size: 1.6rem;
+    font-size: 1.2rem;
     text-decoration: none;
     color: var(--light-primary);
     transition: 0.2s ease;
@@ -299,13 +301,12 @@ header
     font-weight: bold;
     cursor: pointer;
     box-shadow: 0 6px 20px rgba(0,0,0,0.2);
-    transition: all 0.1s ease;
+    transition: all 0.25s ease;
 }
 
 #banner-tag button:hover 
 {
-    background-color: var(--accent-secondary);
-    box-shadow: 0 0 10px 3px rgba(239,105,10,0.25);
+    transform: scale(1.05);
 }
 
 #banner-image img 
@@ -479,14 +480,7 @@ h4
 
 .contact-item:hover 
 {
-    transform: translateY(-0.4rem);
-    border-color: var(--accent);
-    box-shadow: 0 10px 30px rgba(239,105,10,0.25);
-}
-
-.contact-item:hover img 
-{
-    opacity: 1;
+    transform: scale(1.05);
 }
 
 a 
@@ -519,7 +513,7 @@ a
 
 .socials img 
 {
-    width: 60px;
+    width: 80px;
     transition: all 0.3s ease;
 }
 
@@ -540,10 +534,13 @@ footer
 {
     width: 100%;
     box-shadow: var(--shadow);
-    background-color: var(--dark-secondary);
+    background-color: var(--header-footer);
     padding: 2rem;
     text-align: center;
-    color: var(--light-primary);
+}
+
+footer p {
+    color: var(--logistics);
 }
 
 /* ---------------------------------------------------------
@@ -563,7 +560,7 @@ footer
 
     .segment 
     {
-        padding: 3rem 2rem;
+        padding: 3rem 1rem;
     }
 
     .icon-list img 
@@ -614,6 +611,6 @@ footer
 
     .social-links img 
     {
-        width: 40px;
+        width: 50px;
     }
 }
