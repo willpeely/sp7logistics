@@ -24,6 +24,7 @@ header
 }
 
 .option-container {
+    gap: 1rem;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -70,13 +71,18 @@ header
 
 .option-box:hover {
     cursor: pointer;
-    border: 1px solid var(--accent);
+    transform: scale(1.05);
 }
 
 .option-box.selected {
     border: 1px solid var(--accent);
-    transform: scale(1.05);
 }
+
+.option-box.selected p, .option-box.selected h4 {
+    color: var(--accent);
+}
+
+
 
 .styled-form {
     flex-direction: row;
@@ -147,6 +153,7 @@ input {
     font-family: "Raleway", "sans-serif";
     color: var(--light-primary);
     background-color: var(--dark-tertiary);
+    box-shadow: var(--shadow);
     border: var(--dark-outline);
     padding: 0.75rem 0.5rem;
     font-size: 1rem;
@@ -155,6 +162,10 @@ input {
 input:focus{
     outline: none;
     border: 1px solid var(--accent);
+}
+
+input:blank {
+    background-color: red;
 }
 
 
@@ -169,6 +180,7 @@ input::placeholder {
 }
 
 .full-logo {
+    border: 1px solid red;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -176,4 +188,5 @@ input::placeholder {
 }
 .full-logo img{
     width: 50%;
+    height: 80%;
 }
