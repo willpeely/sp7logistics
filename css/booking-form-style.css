@@ -116,6 +116,8 @@ header
     gap: 0.5rem;
 }
 
+
+
 .first-name, .last-name{
     width: 30%;
 }
@@ -140,6 +142,10 @@ header
     transform: scale(1.05);
 }
 
+#van-select {
+   align-self: flex-start;
+   margin-bottom: 0.5rem;
+}
 
 .required {
     color: var(--accent);
@@ -149,7 +155,7 @@ label {
     color: var(--light-primary);
 }
 
-input {
+input , textarea{
     font-family: "Raleway", "sans-serif";
     color: var(--light-primary);
     background-color: var(--dark-tertiary);
@@ -164,14 +170,30 @@ input:focus{
     border: 1px solid var(--accent);
 }
 
-input:blank {
-    background-color: red;
-}
-
-
 input::placeholder {
     color: var(--light-tertiary);
     opacity: 0.6;
+}
+
+textarea {
+    resize: none;
+}
+
+/* Highlight on focus (same as input) */
+textarea:focus {
+    outline: none;
+    border: 1px solid var(--accent);
+}
+
+/* Placeholder style */
+textarea::placeholder {
+    color: var(--light-tertiary);
+    opacity: 0.6;
+}
+
+/* Specific height for Delivery Notes */
+#delivery-notes-input {
+    height: 6rem; /* adjust if needed */
 }
 
 .name {
@@ -180,7 +202,6 @@ input::placeholder {
 }
 
 .full-logo {
-    border: 1px solid red;
     display: flex;
     align-items: center;
     justify-content: center;

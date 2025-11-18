@@ -31,6 +31,7 @@
 
             <section class="booking-container">
                 
+                <p id="van-select">Select a Van<span class="required">*</span></p>
 
                 <div class="option-container">
                     
@@ -109,7 +110,15 @@
                                 <input type="email" name="email" placeholder="Enter your email address">
                             </div>
                         </div>
-                        <button type="submit" id="submit-button">Request a Courier</button>
+
+                        <div class="form-line">
+                            <div class="form-group" id="delivery-notes">
+                                <label>Delivery Notes<span class="required">*</span></label>
+                                <textarea id="delivery-notes-input" name="delivery-notes" placeholder="Enter your delivery notes eg. 2x standard palettes, 4x boxes"></textarea>
+                            </div>
+                        </div>
+
+                        <button type="submit" id="submit-button">Send Contact Form</button>
 
                     </div>
                 </form>
