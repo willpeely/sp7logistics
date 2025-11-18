@@ -167,11 +167,12 @@ header
 --------------------------------------------------------- */
 .service-boxes, .option-container 
 {
-    width: 100%;
+    width: 80%;
     display: grid;
     gap: 2rem;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     justify-items: center;
+    margin-bottom: 2rem;
 }
 
 .service-box-content 
@@ -180,6 +181,8 @@ header
     flex-direction: column;
     flex: 1;
 }
+
+
 
 .service-box, 
 .icon-list li, 
@@ -196,23 +199,41 @@ header
     box-shadow: var(--shadow);
     transition: 0.3s ease;
 }
+#services {
+padding-bottom: 2rem;
+}
+
+#main-services {
+    margin-bottom: 4rem;
+}
+#second-services-segment {
+padding-top: 2rem;
+}
+
+#secondary-services {
+    width: 60%;
+}
+
+#secondary-services img {
+    width: 60%;
+}
 
 .service-box-image 
 {
     width: 40%;
     display: flex;
     justify-content: center;
-    margin-bottom: 2rem;
 }
 
 .service-box-image img 
 {
     width: 100%;
+    margin-bottom: 1rem;
 }
 
 .service-box h4 
 {
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
 }
 
 h4 
@@ -222,9 +243,10 @@ h4
 
 .tag 
 {
+    font-weight: bold;
     font-size: 1.2rem;
     color: var(--accent);
-    font-weight: bold;
+    margin-bottom: 2rem;
 }
 
 .description 
@@ -396,6 +418,11 @@ footer p {
 --------------------------------------------------------- */
 @media (max-width: 600px) 
 {
+
+    .service-boxes, .option-container 
+    {
+        width: 100%;
+    }
     #menu-btn 
     {
         font-size: 1.5rem;
