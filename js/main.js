@@ -25,20 +25,3 @@ document.getElementById("contact-button").addEventListener("click", (e) => {
     e.preventDefault();
     document.querySelector("#contact").scrollIntoView({ behavior: "smooth", block: "start" });
 });
-
-
-const themeCheckbox = document.getElementById("theme-toggle-checkbox");
-
-// Load saved theme from localStorage
-const savedTheme = localStorage.getItem("theme");
-if (savedTheme) {
-    document.documentElement.setAttribute("data-theme", savedTheme);
-    themeCheckbox.checked = savedTheme === "dark";
-}
-
-// Toggle theme on change
-themeCheckbox.addEventListener("change", () => {
-    const newTheme = themeCheckbox.checked ? "dark" : "light";
-    document.documentElement.setAttribute("data-theme", newTheme);
-    localStorage.setItem("theme", newTheme);
-});
