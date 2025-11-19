@@ -38,7 +38,7 @@
     z-index: 2;
 }
 
-#banner-tag button {
+#banner-tag a {
     width: fit-content;
     padding: 0.8rem 1.8rem;
     background: var(--accent);
@@ -51,7 +51,7 @@
     transition: all 0.25s ease;
 }
 
-#banner-tag button:hover {
+#banner-tag a:hover {
     transform: scale(1.05);
 }
 

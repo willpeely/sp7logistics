@@ -1,0 +1,42 @@
+/* 3-column layout */
+.van-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+    width: 100%;
+    align-items: stretch;
+}
+
+/* Each box */
+.van-box {
+    background-color: var(--dark-secondary);
+    padding: 1.5rem;
+    text-align: center;
+    border: var(--dark-outline);
+    transition: 0.25s ease;
+}
+
+/* Box title */
+.van-box h4, .van-info h4, .van-description h4 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+}
+
+/* Info text */
+.van-box p {
+    font-size: 0.9rem;
+    margin: 0.2rem 0;
+}
+
+/* Inner image wrapper */
+.van-box-image {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+/* Vehicle image size */
+.van-box img {
+    width: 50%;       /* Set fixed width instead of 5% */
+}

@@ -515,4 +515,21 @@ footer p {
     {
         width: 50px;
     }
+
+    .fleet-container {
+        width: 100%;
+    }
+
+    .fleet-box {
+        width: 100%;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .van-box, .van-info, .van-description {
+        border: 1px solid red;
+        width: 100%;
+    }
+
+
 }

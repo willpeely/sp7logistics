@@ -1,4 +1,4 @@
-const boxes = document.querySelectorAll('.option-box');
+const boxes = document.querySelectorAll('.van-box');
 const selectedText = document.getElementById('selected');
 
 boxes.forEach(box => {
