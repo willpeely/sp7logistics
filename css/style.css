@@ -211,7 +211,6 @@ header
     justify-content: center;
     transition: 0.3s ease;
     border: var(--dark-outline);
-    border:1px solid red;
 }
 
 .segment-header 
@@ -317,7 +316,6 @@ header
 
 .contact-items 
 {
-    border: 2px solid red;
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
