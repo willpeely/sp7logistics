@@ -1,0 +1,70 @@
+.accent {
+    font-weight: bold;
+    margin-right: 0rem;
+}
+
+#seven {
+    margin-right: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Banner */
+/* Full banner area */
+#banner {
+    width: 100vw;
+    background-color: var(--dark-secondary);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;  /* Center the whole inner block */
+    align-items: center;
+    padding: 4rem 2rem;
+    gap: 1rem;
+    overflow: visible;
+}
+
+/* Text stays normal */
+#banner-tag {
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    margin-left: 1rem;
+}
+
+#banner-tag h1 {
+    color: var(--light-primary);
+    font-size: clamp(1.2rem, 4vw, 2rem);
+    line-height: 1.2;
+    z-index: 2;
+}
+
+#banner-tag button {
+    width: fit-content;
+    padding: 0.8rem 1.8rem;
+    background: var(--accent);
+    color: white;
+    border: 1px solid var(--accent);
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+    transition: all 0.25s ease;
+}
+
+#banner-tag button:hover {
+    transform: scale(1.05);
+}
+
+/* Image sits behind AND stays centered relative to the inner block */
+#banner-image {
+    opacity: 0.9;
+    z-index: 1;
+    pointer-events: none;
+    margin-right: 1rem;
+}
+
+/* Image size */
+#banner-image img {
+    width: clamp(250px, 40vw, 600px);
+    object-fit: contain;
+}

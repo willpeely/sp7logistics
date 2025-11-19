@@ -1,0 +1,124 @@
+.service-box, 
+.icon-list li 
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 2rem;
+    padding: 1.5rem;
+    border: var(--dark-outline);
+    box-shadow: var(--shadow);
+    transition: 0.3s ease;
+}
+
+.service-box-content 
+{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.service-boxes, .option-container 
+{
+    width: 80%;
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    justify-items: center;
+    margin-bottom: 2rem;
+}
+
+#services {
+padding-bottom: 2rem;
+}
+
+#main-services {
+    margin-bottom: 4rem;
+}
+#second-services-segment {
+padding-top: 2rem;
+}
+
+#secondary-services {
+    width: 60%;
+}
+
+#secondary-services img {
+    width: 60%;
+}
+
+.service-box-image 
+{
+    width: 40%;
+    display: flex;
+    justify-content: center;
+}
+
+.service-box-image img 
+{
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.service-box h4 
+{
+    margin-bottom: 2rem;
+}
+
+
+/* ---------------------------------------------------------
+   WHY CHOOSE US - ICON LIST
+--------------------------------------------------------- */
+
+#why-choose-us {
+    background-color: var(--dark-secondary);
+}
+.icon-list 
+{
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    place-content: center;
+    place-items: center;
+    align-items: stretch;
+}
+
+.icon-list li 
+{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    background-color: var(--dark-secondary);
+    height: 100%;
+}
+
+.icon-list li img 
+{
+    width: 80px;
+    margin-bottom: 1rem;
+}
+
+.icon-list li h4, .option-box h4
+{
+    font-size: 1.4rem;
+    margin: 0.5rem 0;
+    line-height: 1.3;
+}
+
+.icon-list li .tag 
+{
+    color: var(--accent);
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.icon-list li .description 
+{
+    margin-bottom: auto;
+    font-size: 1.1rem;
+    line-height: 1.4;
+}
