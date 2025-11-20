@@ -1,4 +1,7 @@
-.booking-container{
+/* ----------------------------------------------------
+   BOOKING CONTAINER
+---------------------------------------------------- */
+.booking-container {
     margin-top: 1rem;
     border: var(--dark-outline);
     box-shadow: var(--shadow);
@@ -9,8 +12,10 @@
     width: 50%;
 }
 
+/* ----------------------------------------------------
+   VAN SELECT AREA
+---------------------------------------------------- */
 .van-select-container {
-
     display: flex;
     flex-direction: row;
     width: 100%;
@@ -20,7 +25,7 @@
     text-align: center;
 }
 
-.van-select{
+.van-select {
     border: var(--dark-outline);
     background-color: var(--background-secondary);
     transition: all 0.25s ease;
@@ -47,6 +52,14 @@
     color: var(--accent);
 }
 
+#van-select-label {
+    align-self: flex-start;
+    margin-bottom: 0.5rem;
+}
+
+/* ----------------------------------------------------
+   NAVIGATION BACK TO FLEET
+---------------------------------------------------- */
 #fleet-nav {
     background-color: var(--accent);
     color: var(--light);
@@ -58,11 +71,14 @@
     transition: all 0.25s ease;
 }
 
-#fleet-nav:hover{
+#fleet-nav:hover {
     cursor: pointer;
     transform: scale(1.1);
 }
 
+/* ----------------------------------------------------
+   FORM SECTION
+---------------------------------------------------- */
 #form-content {
     padding: 1rem;
     display: flex;
@@ -106,20 +122,19 @@
     transform: scale(1.05);
 }
 
-#van-select-label {
-   align-self: flex-start;
-   margin-bottom: 0.5rem;
+/* ----------------------------------------------------
+   FORM INPUTS
+---------------------------------------------------- */
+label {
+    color: var(--foreground-primary);
 }
 
 .required {
     color: var(--accent);
 }
 
-label {
-    color: var(--foreground-primary);
-}
-
-input , textarea{
+input,
+textarea {
     font-family: "Raleway", "sans-serif";
     color: var(--foreground-primary);
     background-color: var(--background-tertiary);
@@ -129,12 +144,14 @@ input , textarea{
     font-size: 1rem;
 }
 
-input:focus{
+input:focus,
+textarea:focus {
     outline: none;
     border: 1px solid var(--accent);
 }
 
-input::placeholder {
+input::placeholder,
+textarea::placeholder {
     color: var(--foreground-tertiary);
     opacity: 0.6;
 }
@@ -143,39 +160,20 @@ textarea {
     resize: none;
 }
 
-/* Highlight on focus (same as input) */
-textarea:focus {
-    outline: none;
-    border: 1px solid var(--accent);
-}
-
-/* Placeholder style */
-textarea::placeholder {
-    color: var(--foreground-tertiary);
-    opacity: 0.6;
-}
-
-/* Specific height for Delivery Notes */
+/* Delivery notes specific height */
 #delivery-notes-input {
-    height: 6rem; /* adjust if needed */
+    height: 6rem;
 }
 
+/* Name line */
 .name {
     display: flex;
     flex-direction: row;
 }
 
-.full-logo {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-}
-.full-logo img{
-    width: 50%;
-    height: 80%;
-}
-
+/* ----------------------------------------------------
+   DIRECT CONTACTS
+---------------------------------------------------- */
 .direct-contacts {
     margin-top: 1rem;
     padding: 1rem;
@@ -203,24 +201,32 @@ textarea::placeholder {
     width: 30%;
 }
 
-@media(max-width: 1000px){
+/* ----------------------------------------------------
+   RESPONSIVE STYLES
+---------------------------------------------------- */
+
+/* Medium containers */
+@media (max-width: 1000px) {
     .booking-container {
         width: 80%;
     }
 }
 
-@media(max-width: 750px){
+/* Tablets */
+@media (max-width: 750px) {
     .booking-container {
         width: 100%;
     }
 }
 
-@media(max-width: 530px){
+/* Small tablets / phones */
+@media (max-width: 530px) {
     #name-line {
         flex-direction: column;
     }
 
-    #first-name, #last-name {
+    #first-name, 
+    #last-name {
         width: 100%;
     }
 
@@ -234,19 +240,19 @@ textarea::placeholder {
 }
 
 /* -----------------------------------------
-   DIRECT CONTACT SECTION – RESPONSIVE
+   DIRECT CONTACT RESPONSIVE
 ----------------------------------------- */
 
 /* Medium screens */
-@media(max-width: 900px){
+@media (max-width: 900px) {
     .direct-contacts {
         width: 70%;
         gap: 2rem;
     }
 }
 
-/* Tablets / narrower screens */
-@media(max-width: 700px){
+/* Tablets */
+@media (max-width: 700px) {
     .direct-contacts {
         width: 90%;
         padding: 1rem;
@@ -259,15 +265,15 @@ textarea::placeholder {
 }
 
 /* Phones */
-@media(max-width: 500px){
+@media (max-width: 500px) {
     .direct-contacts {
-        flex-direction: column;        /* <-- stack vertically */
+        flex-direction: column;
         width: 100%;
         gap: 2rem;
     }
 
     .direct-contact img {
-        width: 30%;                    /* icons scale nicely */
+        width: 30%;
     }
 
     .direct-contact h4 {

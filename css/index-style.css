@@ -1,19 +1,19 @@
-
-/* Banner */
-/* Full banner area */
+/* ---------------------------------------------------------
+   BANNER
+--------------------------------------------------------- */
 #banner {
     width: 100%;
     background-color: var(--header-footer);
     display: flex;
     flex-direction: row;
-    justify-content: center;  /* Center the whole inner block */
+    justify-content: center;
     align-items: center;
     gap: 1rem;
     overflow: visible;
     padding: 0;
 }
 
-/* Text stays normal */
+/* Banner Text */
 #banner-tag {
     padding: 1rem;
     z-index: 2;
@@ -47,7 +47,7 @@
     transform: scale(1.05);
 }
 
-/* Image sits behind AND stays centered relative to the inner block */
+/* Banner Image */
 #banner-image {
     opacity: 0.9;
     z-index: 1;
@@ -55,25 +55,28 @@
     margin-right: 1rem;
 }
 
-/* Image size */
 #banner-image img {
     width: clamp(250px, 40vw, 600px);
     object-fit: contain;
 }
 
+
+/* ---------------------------------------------------------
+   HOME SERVICE BOXES
+--------------------------------------------------------- */
 .home-service-boxes {
     padding: 1rem;
     width: 80%;
     display: flex;
-    align-items: stretch;   /* ensures equal height too */
+    align-items: stretch;
     justify-content: center;
     gap: 2rem;
     margin-bottom: 2rem;
 }
 
 .home-service-box {
-    flex: 1;                /* equal width for all */
-    min-width: 0;           /* prevents flex overflow */
+    flex: 1;
+    min-width: 0;
     padding: 1rem;
     display: flex;
     flex-direction: column;
@@ -117,74 +120,74 @@
     transform: scale(1.05);
 }
 
+
+/* ---------------------------------------------------------
+   CARDS (USED IN COLLAGE)
+--------------------------------------------------------- */
 .card h3 {
     color: var(--accent);
 }
 
 .card img {
-    width: 100%;       /* Image width relative to card */
-    height: 100%;      /* Image height relative to card */
-    object-fit: cover; /* Makes image cover area without stretching */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
+
+/* ---------------------------------------------------------
+   COLLAGE / PICTURES SECTION
+--------------------------------------------------------- */
 #home-collage {
     padding: 0;
 }
+
 #pictures {
     margin-top: 1rem;
 }
 
 #pictures .card {
     border-radius: 10px;
-    overflow: hidden;  /* Keeps images inside the card */
-
+    overflow: hidden;
 }
+
 #pictures img {
     width: 300px;
     height: 400px;
 }
 
-#reviews .card h3{
-    text-align: center;
-}
 
-#reviews .group {
-    gap: 5rem;
-    padding-right: 5rem;
-}
-
-#reviews .card {
-    display: inline-flex;       /* Shrink-wrap around content */
-    white-space: nowrap;        /* Prevent text wrapping */
-    justify-content: center;
-    align-items: center;
-}
-@media(max-width: 900px){
+/* ---------------------------------------------------------
+   RESPONSIVE
+--------------------------------------------------------- */
+@media (max-width: 900px) {
     #home-services {
         padding: 0;
     }
+
     .home-service-boxes {
         width: 100%;
     }
 }
+
 @media (max-width: 600px) {
-    #banner 
-    {
+
+    /* Banner on Mobile */
+    #banner {
         flex-direction: column;
         padding: 2rem 1.5rem;
         gap: 2rem;
     }
 
-    #banner-image 
-    {
+    #banner-image {
         display: none;
     }
 
-    #banner-tag button 
-    {
+    #banner-tag button {
         width: 100%;
     }
 
+    /* Home services */
     #home-services {
         padding: 0 1rem;
     }
@@ -194,6 +197,7 @@
         flex-direction: column;
     }
 
+    /* Collage sizing */
     #pictures img {
         width: 210px;
         height: 280px;

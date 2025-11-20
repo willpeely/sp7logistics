@@ -1,3 +1,6 @@
+/* ----------------------------------------------------
+   ABOUT US SECTION
+---------------------------------------------------- */
 #about-us-paragraph {
     width: 50%;
     display: flex;
@@ -12,12 +15,14 @@
     color: var(--accent);
 }
 
-#about-us img{
+#about-us img {
     width: 50%;
 }
 
+/* ----------------------------------------------------
+   TEAM SECTION
+---------------------------------------------------- */
 .team-container {
-    
     width: 80%;
     display: flex;
     flex-direction: column;
@@ -44,6 +49,9 @@
     background-color: var(--background-secondary);
 }
 
+/* ----------------------------------------------------
+   TEAM MEMBER CONTENT
+---------------------------------------------------- */
 .team-member-header {
     padding: 1rem;
     width: 45%;
@@ -65,27 +73,50 @@
     width: 55%;
 }
 
-#right-description{
-    margin-right: 2rem;
-}
-
 #left-description {
     margin-left: 2rem;
 }
 
-@media(max-width: 1000px){
+#right-description {
+    margin-right: 2rem;
+}
+
+/* ----------------------------------------------------
+   REVIEWS SECTION
+---------------------------------------------------- */
+#reviews .card h3 {
+    text-align: center;
+}
+
+#reviews .group {
+    gap: 5rem;
+    padding-right: 5rem;
+}
+
+#reviews .card {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    white-space: nowrap;
+}
+
+/* ----------------------------------------------------
+   RESPONSIVE STYLES
+---------------------------------------------------- */
+
+@media (max-width: 1000px) {
     .team-member-header img {
         width: 90%;
     }
 }
 
-@media(max-width: 700px){
+@media (max-width: 700px) {
 
     .team-container {
         width: 100%;
     }
 
-    .team-member{
+    .team-member {
         padding: 0;
     }
 
@@ -93,12 +124,13 @@
         flex-direction: column;
     }
 
-    #left-description, #right-description {
-        margin: 0;
-    }
-
     #right-member {
         flex-direction: column-reverse;
+    }
+
+    #left-description,
+    #right-description {
+        margin: 0;
     }
 
     .team-member-header {

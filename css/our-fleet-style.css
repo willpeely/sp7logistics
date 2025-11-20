@@ -1,4 +1,6 @@
-/* Main fleet container */
+/* ---------------------------------------------------------
+   FLEET CONTAINER
+--------------------------------------------------------- */
 #fleet-container {
     display: flex;
     flex-direction: column;
@@ -9,6 +11,10 @@
     margin-top: 2rem;
 }
 
+
+/* ---------------------------------------------------------
+   VAN LAYOUT
+--------------------------------------------------------- */
 .van-container {
     width: 70%;
     display: flex;
@@ -16,13 +22,19 @@
     justify-content: center;
     border: var(--dark-outline);
     box-shadow: var(--shadow);
-    background-color: var(--background-primary);
-    gap:0;
+    gap: 0;
 }
 
 .van-box {
-    border: none;
-    background: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 50%;
+}
+
+.van-box img {
     width: 50%;
 }
 
@@ -34,11 +46,6 @@
     width: 30%;
 }
 
-.fleet-box {
-    display: flex;
-}
-
-
 .van-description {
     display: flex;
     flex-direction: column;
@@ -46,19 +53,21 @@
     justify-content: center;
 }
 
-.van-box img {
-    width: 50%;       /* Set fixed width instead of 5% */
+.fleet-box {
+    display: flex;
 }
 
-@media (max-width: 950px) {
 
+/* ---------------------------------------------------------
+   RESPONSIVE MEDIA QUERIES
+--------------------------------------------------------- */
+@media (max-width: 950px) {
     .van-container {
         width: 95%;
     }
 }
 
 @media (max-width: 750px) {
-    
     .van-container {
         flex-direction: column;
         width: 95%;
@@ -68,11 +77,10 @@
         width: 50%;
     }
 
-    .van-description, .van-info, .van-box {
+    .van-description,
+    .van-info,
+    .van-box {
         padding: 1rem;
         width: 100%;
     }
 }
-
-
-
