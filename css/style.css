@@ -443,12 +443,11 @@ a
     transform: scale(1.1);
 }
 
-#contact h3 {
+.contact h3 {
     color: var(--accent);
     margin-bottom: 1rem;
 }
-
-#contact p {
+.contact p {
     color: var(--light);
 }
 
