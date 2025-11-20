@@ -135,10 +135,10 @@ label {
 
 input,
 textarea {
-    font-family: "Raleway", "sans-serif";
+    font-family: Arial, Helvetica, sans-serif;
     color: var(--foreground-primary);
     background-color: var(--background-tertiary);
-    box-shadow: var(--shadow);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
     border: var(--dark-outline);
     padding: 0.75rem 0.5rem;
     font-size: 1rem;
@@ -152,7 +152,7 @@ textarea:focus {
 
 input::placeholder,
 textarea::placeholder {
-    color: var(--foreground-tertiary);
+    color: var(--foreground-primary);
     opacity: 0.6;
 }
 
@@ -202,105 +202,94 @@ textarea {
 }
 
 /* ----------------------------------------------------
-   RESPONSIVE STYLES
+   COLLECTION & DELIVERY ADDRESS
 ---------------------------------------------------- */
+.address-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
 
-/* Medium containers */
+#collection-postcode-suggestions,
+#delivery-postcode-suggestions {
+    list-style: none;
+    padding: 0;
+    margin: 0.25rem 0 0 0;
+    max-height: 150px;
+    overflow-y: auto;
+    background-color: var(--background-tertiary);
+}
+
+#collection-postcode-suggestions li,
+#delivery-postcode-suggestions li {
+    border: var(--dark-outline);
+    color: var(--foreground-primary);
+    padding: 0.5rem;
+    cursor: pointer;
+}
+
+#collection-postcode-suggestions li:hover,
+#delivery-postcode-suggestions li:hover {
+    background-color: var(--background-secondary);
+}
+
+
+/* ----------------------------------------------------
+   BOOKING CONTAINER RESPONSIVE
+---------------------------------------------------- */
 @media (max-width: 1000px) {
     .booking-container {
         width: 80%;
     }
 }
 
-/* Tablets */
 @media (max-width: 750px) {
     .booking-container {
-        width: 100%;
+        width: 95%;
+        padding: 0.5rem;
     }
-}
 
-/* Small tablets / phones */
-@media (max-width: 530px) {
-    #name-line {
+    .form-line {
         flex-direction: column;
+        align-items: stretch;
     }
 
-    #first-name, 
-    #last-name {
+    .form-group {
         width: 100%;
     }
 
     .van-select-container {
         flex-direction: column;
+        align-items: center;
+    }
+
+    .van-select img {
+        width: 50%;
+    }
+}
+
+@media (max-width: 530px) {
+    #name-line {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    #first-name,
+    #last-name {
+        width: 100%;
+    }
+
+    .address-group {
+        width: 100%;
+    }
+
+    input,
+    textarea {
+        font-size: 0.9rem;
+        padding: 0.6rem 0.5rem;
     }
 
     .van-select img {
         width: 30%;
-    }
-}
-
-#postcode-suggestions {
-  list-style: none;
-  padding: 0;
-  margin: 0.25rem 0 0 0;
-  border: 1px solid #ccc;
-  max-height: 150px;
-  overflow-y: auto;
-}
-
-#postcode-suggestions li {
-  padding: 0.5rem;
-  cursor: pointer;
-}
-
-#postcode-suggestions li:hover {
-  background-color: #f0f0f0;
-}
-
-
-
-/* -----------------------------------------
-   DIRECT CONTACT RESPONSIVE
------------------------------------------ */
-
-/* Medium screens */
-@media (max-width: 900px) {
-    .direct-contacts {
-        width: 70%;
-        gap: 2rem;
-    }
-}
-
-/* Tablets */
-@media (max-width: 700px) {
-    .direct-contacts {
-        width: 90%;
-        padding: 1rem;
-        gap: 1.5rem;
-    }
-
-    .direct-contact img {
-        width: 40%;
-    }
-}
-
-/* Phones */
-@media (max-width: 500px) {
-    .direct-contacts {
-        flex-direction: column;
-        width: 100%;
-        gap: 2rem;
-    }
-
-    .direct-contact img {
-        width: 30%;
-    }
-
-    .direct-contact h4 {
-        font-size: 1.2rem;
-    }
-
-    .direct-contact p {
-        font-size: 1rem;
     }
 }

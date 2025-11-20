@@ -6,6 +6,7 @@
     --accent: #F36C1B;
     --logistics: #A6A6A6;
     --light: #f1f1f1;
+    --shadow: 0 6px 20px rgba(0,0,0,0.2);
 
     --header-footer: #1B1D21;
     --side-bar: #d0d0d0;
@@ -19,7 +20,7 @@
     --background-tertiary: #d0d0d0;
 
     --dark-outline: 1px solid rgba(0,0,0,0.08);
-    --shadow: 0 6px 20px rgba(0,0,0,0.2);
+    
 }
 
 [data-theme="dark"] {
@@ -35,7 +36,6 @@
     --background-tertiary: #2C3444;
 
     --dark-outline: 1px solid rgba(255,255,255,0.08);
-    --shadow: 0 6px 20px rgba(0,0,0,0.2);
 }
 
 

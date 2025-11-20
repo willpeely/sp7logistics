@@ -117,6 +117,33 @@
                             </div>
                         </div>
 
+                        <!-- COLLECTION ADDRESS -->
+                        <div class="form-line">
+                            <div class="form-group address-group">
+                                <label>Collection Address<span class="required">*</span></label>
+                                <input type="text" name="collection_address_line1" placeholder="Address Line 1" required>
+                                <input type="text" name="collection_address_line2" placeholder="Address Line 2">
+                                <input type="text" name="collection_city" placeholder="City" required>
+                                <input type="text" name="collection_postcode" placeholder="Postcode" id="collection-postcode">
+                                <ul id="collection-postcode-suggestions"></ul>
+                            </div>
+                        </div>
+
+
+                        <!-- DELIVERY ADDRESS -->
+                        <div class="form-line">
+                            <div class="form-group address-group">
+                                <label>Delivery Address<span class="required">*</span></label>
+                                <input type="text" name="delivery_address_line1" placeholder="Address Line 1" required>
+                                <input type="text" name="delivery_address_line2" placeholder="Address Line 2">
+                                <input type="text" name="delivery_city" placeholder="City" required>
+                                <input type="text" name="delivery_postcode" placeholder="Postcode" id="delivery-postcode">
+                                <ul id="delivery-postcode-suggestions"></ul>
+                            </div>
+                        </div>
+
+
+                        <!--
                         <div class="form-line">
                             <div class="form-group">
                                 <label for="postcode">Postcode</label>
@@ -124,6 +151,7 @@
                                 <ul id="postcode-suggestions"></ul>
                             </div>
                         </div>
+                        -->
 
                         
 
@@ -205,6 +233,7 @@
     <script src="js/contact-form.js"></script>
     <script src="js/menu.js"></script>
     <script src="js/theme.js"></script>
+    <script src="js/postcode.js"></script>
 
 </body>
 </html>
