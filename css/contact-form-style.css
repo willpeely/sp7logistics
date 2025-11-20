@@ -239,6 +239,26 @@ textarea {
     }
 }
 
+#postcode-suggestions {
+  list-style: none;
+  padding: 0;
+  margin: 0.25rem 0 0 0;
+  border: 1px solid #ccc;
+  max-height: 150px;
+  overflow-y: auto;
+}
+
+#postcode-suggestions li {
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+#postcode-suggestions li:hover {
+  background-color: #f0f0f0;
+}
+
+
+
 /* -----------------------------------------
    DIRECT CONTACT RESPONSIVE
 ----------------------------------------- */
