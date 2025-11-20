@@ -49,7 +49,7 @@
 }
 
 html {
-    font-size: 16px;
+    font-size: 18px;
 }
 
 body 
@@ -198,25 +198,44 @@ header
 /* ---------------------------------------------------------
    SEGMENTS (SECTION WRAPPER)
 --------------------------------------------------------- */
-.segment 
+.segment, .collage
 {
-    
     width: 100%;
     max-width: 100%;
     scroll-margin-top: 85px;
     display: flex;
-    padding: 2rem;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     transition: 0.3s ease;
-    border: var(--dark-outline);
+}
+
+.segment {
+    padding: 2rem;
+}
+.collage {
+    padding: 0;
 }
 
 .segment-header 
 {
-    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
     text-align: center;
+}
+
+.segment-header-paragraph {
+    font-size: 1.2rem;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+
 }
 
 .segment h1 
@@ -235,6 +254,17 @@ header
 {
     font-size: clamp(1.3rem, 2.5vw, 2rem);
 }
+
+.accent {
+    font-weight: bold;
+    margin-right: 0rem;
+}
+
+.seven {
+    margin-right: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 
 /* Theme switch */
 .theme-switch-wrapper 
@@ -305,7 +335,6 @@ header
     font-weight: bold;
     font-size: 1.2rem;
     color: var(--accent);
-    margin-bottom: 2rem;
 }
 
 .description 
@@ -317,9 +346,11 @@ header
 .contact-items 
 {
     display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
+    flex-direction: column;
+    gap: 1.5rem;
     justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
 }
 
 .contact-item 
@@ -329,15 +360,13 @@ header
     flex-direction: column;
     align-items: center;
     gap: 0rem;
-    padding: 1rem;
-    border: var(--dark-outline);
     text-align: center;
     transition: 0.25s ease;
 }
 
 .contact-item img 
 {
-    width: 2rem;
+    width: 10%;
     opacity: 0.9;
     transition: 0.25s ease;
 }
@@ -369,7 +398,6 @@ a
     align-items: center;
     justify-content: center;
     text-align: center;
-    margin-top: 2rem;
 }
 
 .social-links 
@@ -377,14 +405,13 @@ a
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 2rem;
-    margin-bottom: 1rem;
-    gap: 3rem;
+    margin: 1rem;
+    gap: 1.5rem;
 }
 
 .socials img 
 {
-    width: 60px;
+    width: 50px;
     transition: all 0.3s ease;
 }
 
@@ -393,23 +420,13 @@ a
     transform: scale(1.1);
 }
 
-#contact 
-{
-    padding-bottom: 1rem;
+#contact h3 {
+    color: var(--accent);
+    margin-bottom: 1rem;
 }
 
-.contact-item
-{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    gap: 2rem;
-    padding: 1.5rem;
-    border: var(--dark-outline);
-    box-shadow: var(--shadow);
-    transition: 0.3s ease;
+#contact p {
+    color: var(--logistics);
 }
 
 
@@ -417,12 +434,6 @@ h4
 {
     font-size: 1.6rem;
 }
-
-/* ---------------------------------------------------------
-   CONTACT
---------------------------------------------------------- */
-
-
 
 /* ---------------------------------------------------------
    FOOTER
@@ -438,6 +449,39 @@ footer
 
 footer p {
     color: var(--logistics);
+}
+
+.carousel {
+    background-color: var(--header-footer);
+    padding: 1rem 0;
+    width: 100%;
+    display: flex;
+    overflow-x: auto;
+    pointer-events: none;
+}
+
+.carousel::-webkit-scrollbar {
+    display: none;
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    animation: spin 60s linear infinite;
+    padding-right: 1rem;
+}
+
+@keyframes spin {
+    from { translate: 0; }
+    to { translate: -100%; }
 }
 
 
@@ -460,6 +504,13 @@ footer p {
     .service-boxes, .option-container 
     {
         width: 100%;
+    }
+
+    .segment-header-paragraph {
+        width: 95%;
+        text-align: left;
+        font-size: 1rem;
+
     }
 
     #logo img {
@@ -521,21 +572,4 @@ footer p {
     {
         width: 50px;
     }
-
-    .fleet-container {
-        width: 100%;
-    }
-
-    .fleet-box {
-        width: 100%;
-        flex-direction: column;
-        gap: 2rem;
-    }
-
-    .van-box, .van-info, .van-description {
-        border: 1px solid red;
-        width: 100%;
-    }
-
-
 }
