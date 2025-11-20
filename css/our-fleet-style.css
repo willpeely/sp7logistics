@@ -26,12 +26,17 @@
 }
 
 .van-box {
+    padding-top: 1rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
     width: 50%;
+}
+
+.van-box h4 {
+    font-size: 1.3rem;
 }
 
 .van-box img {
@@ -51,6 +56,11 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+
+.van-description p {
+    color: var(--accent);
+    font-weight: 550;
 }
 
 .fleet-box {
