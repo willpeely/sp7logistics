@@ -63,6 +63,7 @@ body
 
 main {
     width: 100%;
+    line-height: 1.5;
 }
 
 h2 
@@ -121,6 +122,28 @@ header
 {
     color: var(--logistics);
 }
+
+/* Scrollbar width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Scrollbar track (background) */
+::-webkit-scrollbar-track {
+    background: var(--light-secondary);   /* or any color */
+    border: var(--dark-outline);
+}
+
+/* Scrollbar thumb (the draggable part) */
+::-webkit-scrollbar-thumb {
+    background: var(--accent);
+}
+
+/* Thumb hover */
+::-webkit-scrollbar-thumb:hover {
+    cursor: pointer;
+}
+
 
 /* ---------------------------------------------------------
    SIDE MENU (SLIDE-OUT)
@@ -211,7 +234,7 @@ header
 }
 
 .segment {
-    padding: 2rem;
+    padding: 1rem;
 }
 .collage {
     padding: 0;
@@ -235,7 +258,6 @@ header
     justify-content: center;
     align-items: center;
     width: 50%;
-
 }
 
 .segment h1 
@@ -332,15 +354,16 @@ header
 
 .tag 
 {
-    font-weight: bold;
-    font-size: 1.2rem;
+    font-weight: 550;
+    font-size: 1.1rem;
     color: var(--accent);
 }
 
-.description 
-{
-    line-height: 1.5;
-    font-size: 1.1rem;
+.tags {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
 }
 
 .contact-items 
@@ -426,7 +449,7 @@ a
 }
 
 #contact p {
-    color: var(--logistics);
+    color: var(--light);
 }
 
 
@@ -440,6 +463,7 @@ h4
 --------------------------------------------------------- */
 footer 
 {
+    margin-top: 1rem;
     width: 100%;
     box-shadow: var(--shadow);
     background-color: var(--header-footer);
@@ -510,7 +534,6 @@ footer p {
         width: 95%;
         text-align: left;
         font-size: 1rem;
-
     }
 
     #logo img {
