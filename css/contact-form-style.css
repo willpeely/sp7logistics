@@ -1,8 +1,7 @@
 .booking-container{
-    margin: 2rem;
+    margin-top: 1rem;
     border: var(--dark-outline);
     box-shadow: var(--shadow);
-    padding: 1rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -10,43 +9,58 @@
     width: 50%;
 }
 
-.van-box:hover {
+.van-select-container {
+
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    text-align: center;
+}
+
+.van-select{
+    border: var(--dark-outline);
+    background-color: var(--background-secondary);
+    transition: all 0.25s ease;
+}
+
+.van-select input {
+    display: none;
+}
+
+.van-select img {
+    width: 70%;
+}
+
+.van-select:hover {
     cursor: pointer;
     transform: scale(1.05);
 }
 
-.van-box.selected {
+.van-select.selected {
     border: 1px solid var(--accent);
 }
 
-.van-box.selected p, .van-box.selected h4 {
+.van-select.selected h4 {
     color: var(--accent);
 }
 
 #fleet-nav {
     background-color: var(--accent);
+    color: var(--light);
+    border: 1px solid var(--accent);
+    box-shadow: var(--shadow);
     padding: 0.5rem;
     align-self: start;
     margin-bottom: 1rem;
     transition: all 0.25s ease;
 }
 
-#fleet-nav a{
-    color: var(--light);
-}
-
 #fleet-nav:hover{
     cursor: pointer;
     transform: scale(1.1);
-}
-
-
-
-.styled-form {
-    width: 100%;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
 }
 
 #form-content {
@@ -74,19 +88,12 @@
     gap: 0.5rem;
 }
 
-
-
-.first-name, .last-name{
-}
-
-
 #form-content button {
     font-family: "Raleway", "sans-serif";
     color: white;
     font-weight: bold;
-    padding: 0.75rem 0.5rem;
+    padding: 0.75rem 4rem;
     margin-top: 1rem;
-    width: 50%;
     font-size: 1rem;
     background-color: var(--accent);
     border: var(--accent);
@@ -99,7 +106,7 @@
     transform: scale(1.05);
 }
 
-#van-select {
+#van-select-label {
    align-self: flex-start;
    margin-bottom: 0.5rem;
 }
@@ -109,13 +116,13 @@
 }
 
 label {
-    color: var(--light-primary);
+    color: var(--foreground-primary);
 }
 
 input , textarea{
     font-family: "Raleway", "sans-serif";
-    color: var(--light-primary);
-    background-color: var(--dark-tertiary);
+    color: var(--foreground-primary);
+    background-color: var(--background-tertiary);
     box-shadow: var(--shadow);
     border: var(--dark-outline);
     padding: 0.75rem 0.5rem;
@@ -128,7 +135,7 @@ input:focus{
 }
 
 input::placeholder {
-    color: var(--light-tertiary);
+    color: var(--foreground-tertiary);
     opacity: 0.6;
 }
 
@@ -144,7 +151,7 @@ textarea:focus {
 
 /* Placeholder style */
 textarea::placeholder {
-    color: var(--light-tertiary);
+    color: var(--foreground-tertiary);
     opacity: 0.6;
 }
 
@@ -167,4 +174,107 @@ textarea::placeholder {
 .full-logo img{
     width: 50%;
     height: 80%;
+}
+
+.direct-contacts {
+    margin-top: 1rem;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    border: var(--dark-outline);
+    box-shadow: var(--shadow);
+}
+
+.direct-contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.25s ease;
+}
+
+.direct-contact:hover {
+    transform: scale(1.1);
+}
+
+.direct-contact img {
+    width: 30%;
+}
+
+@media(max-width: 1000px){
+    .booking-container {
+        width: 80%;
+    }
+}
+
+@media(max-width: 750px){
+    .booking-container {
+        width: 100%;
+    }
+}
+
+@media(max-width: 530px){
+    #name-line {
+        flex-direction: column;
+    }
+
+    #first-name, #last-name {
+        width: 100%;
+    }
+
+    .van-select-container {
+        flex-direction: column;
+    }
+
+    .van-select img {
+        width: 30%;
+    }
+}
+
+/* -----------------------------------------
+   DIRECT CONTACT SECTION – RESPONSIVE
+----------------------------------------- */
+
+/* Medium screens */
+@media(max-width: 900px){
+    .direct-contacts {
+        width: 70%;
+        gap: 2rem;
+    }
+}
+
+/* Tablets / narrower screens */
+@media(max-width: 700px){
+    .direct-contacts {
+        width: 90%;
+        padding: 1rem;
+        gap: 1.5rem;
+    }
+
+    .direct-contact img {
+        width: 40%;
+    }
+}
+
+/* Phones */
+@media(max-width: 500px){
+    .direct-contacts {
+        flex-direction: column;        /* <-- stack vertically */
+        width: 100%;
+        gap: 2rem;
+    }
+
+    .direct-contact img {
+        width: 30%;                    /* icons scale nicely */
+    }
+
+    .direct-contact h4 {
+        font-size: 1.2rem;
+    }
+
+    .direct-contact p {
+        font-size: 1rem;
+    }
 }

@@ -5,37 +5,36 @@
 {
     /* Accent colors */
     --accent: #F36C1B;
-    --accent-secondary: #FF9635;
     --logistics: #A6A6A6;
-    --header-footer: #1B1D21;
-    --side-bar: #d0d0d0;
     --light: #f1f1f1;
 
-    /* Light theme */
-    --light-primary: #1B1D21;
-    --light-secondary: #43474E;
-    --light-tertiary: #6B6F78;
+    --header-footer: #1B1D21;
+    --side-bar: #d0d0d0;
 
-    /* Dark theme */
-    --dark-primary: #f1f1f1;
-    --dark-secondary: #e7e7e7;
-    --dark-tertiary: #d0d0d0;
+    --foreground-primary: #1B1D21;
+    --foreground-secondary: #43474E;
+    --foreground-tertiary: #6B6F78;
+
+    --background-primary: #f1f1f1;
+    --background-secondary: #e7e7e7;
+    --background-tertiary: #d0d0d0;
 
     --dark-outline: 1px solid rgba(0,0,0,0.08);
-    --shadow: 0 6px 20px rgba(0,0,0,0.08);
+    --shadow: 0 6px 20px rgba(0,0,0,0.2);
 }
 
 [data-theme="dark"] 
 {
-    --light-primary: #F4F7FA;
-    --light-secondary: #DDE6EE;
-    --light-tertiary: #DDE6EE;
     --header-footer: #0e1218;
     --side-bar: #2C3444;
 
-    --dark-primary: #151b25;
-    --dark-secondary: #1A202C;
-    --dark-tertiary: #2C3444;
+    --foreground-primary: #F4F7FA;
+    --foreground-secondary: #DDE6EE;
+    --foreground-tertiary: #DDE6EE;
+    
+    --background-primary: #151b25;
+    --background-secondary: #1A202C;
+    --background-tertiary: #2C3444;
 
     --dark-outline: 1px solid rgba(255,255,255,0.08);
     --shadow: 0 6px 20px rgba(0,0,0,0.2);
@@ -55,7 +54,7 @@ html {
 body 
 {
     font-family: "Raleway", sans-serif;
-    background-color: var(--dark-primary);
+    background-color: var(--background-primary);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -75,7 +74,7 @@ h3,
 h4,
 p 
 {
-    color: var(--light-primary);
+    color: var(--foreground-primary);
 }
 
 header 
@@ -130,7 +129,7 @@ header
 
 /* Scrollbar track (background) */
 ::-webkit-scrollbar-track {
-    background: var(--light-secondary);   /* or any color */
+    background: var(--foreground-secondary);   /* or any color */
     border: var(--dark-outline);
 }
 
@@ -170,12 +169,12 @@ header
 
 
 .top-nav a:hover {
-    color: var(--dark-tertiary);
+    color: var(--background-tertiary);
 }
 
 #side-menu a:hover 
 {
-    color: var(--dark-tertiary);
+    color: var(--background-tertiary);
 }
 #side-menu 
 {
@@ -248,6 +247,7 @@ header
     justify-content: center;
     width: 100%;
     text-align: center;
+    margin-bottom: 1rem;
 }
 
 .segment-header-paragraph {
@@ -320,7 +320,7 @@ header
     right: 0;
     bottom: 0;
     border: var(--dark-outline);
-    background-color: var(--dark-tertiary);
+    background-color: var(--background-tertiary);
     border-radius: 30px;
     transition: background-color 0.4s ease;
     box-shadow: var(--shadow);
@@ -366,6 +366,15 @@ header
     margin-bottom: 1rem;
 }
 
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
 .contact-items 
 {
     display: flex;
@@ -373,6 +382,7 @@ header
     gap: 1.5rem;
     justify-content: center;
     align-items: center;
+    text-align: center;
     margin-bottom: 1rem;
 }
 
@@ -410,7 +420,7 @@ a
 {
     font-weight: bold;
     text-decoration: none;
-    color: var(--light-primary);
+    color: var(--foreground-primary);
 }
 
 /* Socials */
@@ -512,8 +522,20 @@ footer p {
    RESPONSIVE MEDIA QUERIES
 --------------------------------------------------------- */
 
-@media (max-width: 850px){
+@media (max-width: 900px){
 
+    header {
+        justify-content: center;
+    }
+
+    #logo {
+        width: 90%;
+        justify-content: center;
+    }
+
+    .theme-switch-wrapper {
+        width: 4rem;
+    }
     #menu-btn {
         display: block;
     }
@@ -524,7 +546,7 @@ footer p {
 
 @media (max-width: 600px) 
 {
-    .service-boxes, .option-container 
+    .service-boxes
     {
         width: 100%;
     }
@@ -541,7 +563,7 @@ footer p {
 
     .segment 
     {
-        padding: 3rem 1rem;
+        padding: 1rem 1rem;
     }
 
     .icon-list img 
@@ -567,23 +589,6 @@ footer p {
     {
         width: 90%;
         grid-template-columns: 1fr;
-    }
-
-    #banner 
-    {
-        flex-direction: column;
-        padding: 2rem 1.5rem;
-        gap: 2rem;
-    }
-
-    #banner-image 
-    {
-        display: none;
-    }
-
-    #banner-tag button 
-    {
-        width: 100%;
     }
 
     .social-links {

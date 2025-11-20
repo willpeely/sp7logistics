@@ -54,46 +54,45 @@
     <main>
 
         <section class="segment" id="booking">
-            <h2>Contact Form</h2>
-            <h3>Fill out our contact form to get in touch with our team</h3>
+            <div class="segment-header">
+                <h2>Contact Form</h2>
+                <h3>Fill out our contact form to get in touch with our team</h3>
+            </div>
 
-            <section class="booking-container">
-                
-                <p id="van-select">Select a Van<span class="required">*</span></p>
-                <div id="fleet-nav">
-                    <a id="view-our-fleet" href="our-fleet.html">View Our Fleet</a>
-                </div>
-
-                <div class="van-container">
-                    
-                    <div class="van-box" data-value="Small Van">
-                        <h4>Small</h4>
-                        <div class="van-box-image">
-                            <img src="images/icons/truck.png">
-                        </div>
-                    </div>
-
-                    <div class="van-box" data-value="Medium Wheel Base">
-                        <h4>Medium</h4>
-                        <div class="van-box-image">
-                            <img src="images/icons/truck.png">
-                        </div>
-                    </div>
-
-                    <div class="van-box" data-value="Large Wheel Base">
-                        <h4>Large</h4>
-                        <div class="van-box-image">
-                            <img src="images/icons/truck.png">
-                        </div>
-                    </div>
-
-                </div>
-
-
-                <form action="../send_form.php" method="POST" class="styled-form">
+            <form action="../send_form.php" method="POST" class="booking-container">
+        
                     <div id="form-content">
+                        <div class="form-line" id="van-line">
+                            <div class="form-group">
+                                <p id="van-select-label">Select a Van<span class="required">*</span></p>
 
-                        <div class="form-line">
+                                <a id="fleet-nav" href="our-fleet.html">View Our Fleet</a>
+
+                                <div class="van-select-container">
+
+                                    <label class="van-select">
+                                        <input type="radio" name="van_size" value="Small">
+                                        <h4>Small</h4>
+                                        <img src="images/icons/truck.png">
+                                    </label>
+
+                                    <label class="van-select">
+                                        <input type="radio" name="van_size" value="Medium">
+                                        <h4>Medium</h4>
+                                        <img src="images/icons/truck.png">
+                                    </label>
+
+                                    <label class="van-select">
+                                        <input type="radio" name="van_size" value="Large">
+                                        <h4>Large</h4>
+                                        <img src="images/icons/truck.png">
+                                    </label>
+
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-line" id="name-line">
                             <div class="form-group" id="first-name">
                                 <label>First Name<span class="required">*</span></label>
                                 <input type="text" name="first_name" placeholder="Enter your first name">
@@ -130,7 +129,26 @@
 
                     </div>
                 </form>
-            </section>
+
+        </section>
+
+        <section class="segment" id="direct-contact-segment">
+            <div class="segment-header">
+                <h3>Or you can contact us directly</h3>
+            </div>
+
+            <div class="direct-contacts">
+                 <a class="direct-contact" href="mailto:contact@sp7logistics.com">
+                    <img src="images/icons/email.png">
+                    <h4>Email</h4>
+                    <p>contact@sp7logistics.com</p>
+                </a>
+                <a class="direct-contact" href="tel:+44 7376 903429">
+                    <img src="images/icons/phone.png">
+                    <h4>Phone</h4>
+                    <p>+44 7376 903429</p>
+                </a>
+            </div>
         </section>
 
     </main>
@@ -140,14 +158,14 @@
             <h3>Contact Us</h3>
             <div class="contact-items">
 
-                <a class="contact-item" href="mailto:emailexample@email.com">
+                <a class="contact-item" href="mailto:contact@sp7logistics.com">
                     <img src="images/icons/email.png">
-                    <p>emailexample@email.com</p>
+                    <p>contact@sp7logistics.com.com</p>
                 </a>
 
-                <a class="contact-item" href="tel:+44 12345 6789">
+                <a class="contact-item" href="tel:+44 7376 903429">
                     <img src="images/icons/phone.png">
-                    <p>+44 7496 001490</p>
+                    <p>+44 7376 903429</p>
                 </a>
             </div>
 

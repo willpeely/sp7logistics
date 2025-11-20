@@ -10,7 +10,6 @@
 
 /* Each box */
 .van-box {
-    background-color: var(--dark-secondary);
     padding: 1.5rem;
     text-align: center;
     border: var(--dark-outline);

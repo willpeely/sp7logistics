@@ -3,7 +3,7 @@
 /* Full banner area */
 #banner {
     width: 100%;
-    background-color: var(--dark-secondary);
+    background-color: var(--header-footer);
     display: flex;
     flex-direction: row;
     justify-content: center;  /* Center the whole inner block */
@@ -24,7 +24,7 @@
 }
 
 #banner-tag h1 {
-    color: var(--light-primary);
+    color: var(--light);
     font-size: clamp(1.2rem, 4vw, 2rem);
     line-height: 1.2;
     z-index: 2;
@@ -62,12 +62,13 @@
 }
 
 .home-service-boxes {
-    margin-top: 2rem;
-    width: 60%;
+    padding: 1rem;
+    width: 80%;
     display: flex;
     align-items: stretch;   /* ensures equal height too */
     justify-content: center;
     gap: 2rem;
+    margin-bottom: 2rem;
 }
 
 .home-service-box {
@@ -126,6 +127,13 @@
     object-fit: cover; /* Makes image cover area without stretching */
 }
 
+#home-collage {
+    padding: 0;
+}
+#pictures {
+    margin-top: 1rem;
+}
+
 #pictures .card {
     border-radius: 10px;
     overflow: hidden;  /* Keeps images inside the card */
@@ -151,4 +159,43 @@
     justify-content: center;
     align-items: center;
 }
+@media(max-width: 900px){
+    #home-services {
+        padding: 0;
+    }
+    .home-service-boxes {
+        width: 100%;
+    }
+}
+@media (max-width: 600px) {
+    #banner 
+    {
+        flex-direction: column;
+        padding: 2rem 1.5rem;
+        gap: 2rem;
+    }
 
+    #banner-image 
+    {
+        display: none;
+    }
+
+    #banner-tag button 
+    {
+        width: 100%;
+    }
+
+    #home-services {
+        padding: 0 1rem;
+    }
+
+    .home-service-boxes {
+        width: 90%;
+        flex-direction: column;
+    }
+
+    #pictures img {
+        width: 210px;
+        height: 280px;
+    }
+}
