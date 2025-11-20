@@ -85,6 +85,7 @@
    REVIEWS SECTION
 ---------------------------------------------------- */
 #reviews .card h3 {
+    color: var(--accent);
     text-align: center;
 }
 

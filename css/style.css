@@ -469,13 +469,23 @@ footer p {
     justify-content: center;
     gap: 1rem;
     padding-right: 1rem;
-    animation: spin 60s linear infinite;
+    animation: spin-left 60s linear infinite;
 }
 
-@keyframes spin {
+.collage-segment {
+    padding: 0;
+}
+
+@keyframes spin-left {
     from { translate: 0; }
     to { translate: -100%; }
 }
+
+@keyframes spin-right {
+    from { translate: -100%; }
+    to { translate: 0; }
+}
+
 
 
 /* ---------------------------------------------------------
