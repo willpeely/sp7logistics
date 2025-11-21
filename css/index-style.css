@@ -138,12 +138,14 @@
 /* ---------------------------------------------------------
    COLLAGE / PICTURES SECTION
 --------------------------------------------------------- */
-#home-collage {
-    padding: 0;
+
+
+#picture-carousel-2 {
+    padding: 0 0 1rem 0;
 }
 
-#pictures {
-    margin-top: 1rem;
+#picture-carousel-2 .group {
+    animation: spin-right 60s linear infinite;
 }
 
 #pictures .card {
@@ -152,8 +154,8 @@
 }
 
 #pictures img {
-    width: 300px;
-    height: 400px;
+    width: 270px;
+    height: 360px;
 }
 
 
