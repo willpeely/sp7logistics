@@ -14,4 +14,26 @@ boxes.forEach(box => {
     });
 });
 
+const form = document.querySelector('.booking-container');
 
+form.addEventListener('submit', async (e) => {
+  e.preventDefault();
+
+  const formData = new FormData(form);
+  const data = Object.fromEntries(formData.entries());
+
+  try {
+    const res = await fetch('/send-form', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data),
+    });
+
+    const text = await res.text();
+    alert(text); 
+    form.reset();
+  } catch (err) {
+    console.error(err);
+    alert('Error sending email.');
+  }
+});
