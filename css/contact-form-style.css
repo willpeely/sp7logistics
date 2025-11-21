@@ -85,7 +85,6 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 1rem;
 }
 
 .form-line {
@@ -94,7 +93,6 @@
     justify-content: center;
     align-items: center;
     gap: 1rem;
-    margin-bottom: 1rem;
 }
 
 .form-group {
@@ -102,6 +100,7 @@
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
+    margin-bottom: 1rem;
 }
 
 #form-content button {
@@ -235,61 +234,85 @@ textarea {
 
 
 /* ----------------------------------------------------
-   BOOKING CONTAINER RESPONSIVE
+   RESPONSIVE STYLES
 ---------------------------------------------------- */
+
+/* Medium containers */
 @media (max-width: 1000px) {
     .booking-container {
         width: 80%;
     }
 }
 
+/* Tablets */
 @media (max-width: 750px) {
     .booking-container {
-        width: 95%;
-        padding: 0.5rem;
+        width: 100%;
     }
+}
 
-    .form-line {
+/* Small tablets / phones */
+@media (max-width: 530px) {
+    #name-line {
         flex-direction: column;
-        align-items: stretch;
     }
 
-    .form-group {
+    #first-name, 
+    #last-name {
         width: 100%;
     }
 
     .van-select-container {
         flex-direction: column;
-        align-items: center;
-    }
-
-    .van-select img {
-        width: 50%;
-    }
-}
-
-@media (max-width: 530px) {
-    #name-line {
-        flex-direction: column;
-        gap: 0.5rem;
-    }
-
-    #first-name,
-    #last-name {
-        width: 100%;
-    }
-
-    .address-group {
-        width: 100%;
-    }
-
-    input,
-    textarea {
-        font-size: 0.9rem;
-        padding: 0.6rem 0.5rem;
     }
 
     .van-select img {
         width: 30%;
+    }
+}
+
+/* -----------------------------------------
+   DIRECT CONTACT RESPONSIVE
+----------------------------------------- */
+
+/* Medium screens */
+@media (max-width: 900px) {
+    .direct-contacts {
+        width: 70%;
+        gap: 2rem;
+    }
+}
+
+/* Tablets */
+@media (max-width: 700px) {
+    .direct-contacts {
+        width: 90%;
+        padding: 1rem;
+        gap: 1.5rem;
+    }
+
+    .direct-contact img {
+        width: 40%;
+    }
+}
+
+/* Phones */
+@media (max-width: 500px) {
+    .direct-contacts {
+        flex-direction: column;
+        width: 100%;
+        gap: 2rem;
+    }
+
+    .direct-contact img {
+        width: 30%;
+    }
+
+    .direct-contact h4 {
+        font-size: 1.2rem;
+    }
+
+    .direct-contact p {
+        font-size: 1rem;
     }
 }
