@@ -1,5 +1,34 @@
 #thank-you h1 {
-    margin: 5rem 0rem;
+    color: var(--foreground-primary);
     width: 50%;
+    margin: 2rem 0;
     text-align: center;
+}
+
+#thank-you img {
+    width: 30%;
+}
+
+#thank-you a {
+    background-color: var(--accent);
+    color: var(--light);
+    padding: 1rem;
+    font-size: 1.2rem;
+    border: 1px solid var(--accent);
+    box-shadow: var(--shadow);
+    transition: all 0.25s ease;
+}
+
+#thank-you a:hover {
+    transform: scale(1.05);
+}
+
+@media(max-width: 650px){
+    #thank-you h1 {
+        width: 90%;
+    }
+
+    #thank-you img {
+        width: 60%;
+    }
 }
