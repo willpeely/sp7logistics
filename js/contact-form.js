@@ -23,7 +23,7 @@ form.addEventListener('submit', async (e) => {
   const data = Object.fromEntries(formData.entries());
 
   try {
-    const res = await fetch('https://sp7logistics.onrender.com/send-form', {
+    const res = await fetch('/send-form', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(data),
