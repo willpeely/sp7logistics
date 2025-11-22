@@ -22,7 +22,7 @@ function sendContactEmail(formData) {
       <p><strong>Email:</strong> ${formData.email}</p>
       <p><strong>Collection Address:</strong> ${formData.collection_address_line1} ${formData.collection_address_line2}, ${formData.collection_city}, ${formData.collection_postcode}</p>
       <p><strong>Delivery Address:</strong> ${formData.delivery_address_line1} ${formData.delivery_address_line2}, ${formData.delivery_city}, ${formData.delivery_postcode}</p>
-      <p><strong>Delivery Notes:</strong> ${formData['delivery-notes']}</p>
+      <p><strong>Delivery Notes:</strong> ${formData.delivery_notes}</p>
     `,
   };
 
