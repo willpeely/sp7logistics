@@ -40,7 +40,8 @@
 }
 
 .van-box img {
-    width: 50%;
+    width: 60%;
+    margin: 1rem 0;
 }
 
 .van-info {

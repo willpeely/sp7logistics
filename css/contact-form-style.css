@@ -26,6 +26,7 @@
 }
 
 .van-select {
+    flex: 1;
     border: var(--dark-outline);
     background-color: var(--background-secondary);
     transition: all 0.25s ease;
@@ -36,6 +37,7 @@
 }
 
 .van-select img {
+    margin-top: 1rem;
     width: 70%;
 }
 
