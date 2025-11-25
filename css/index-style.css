@@ -4,7 +4,7 @@
 #banner {
     width: 100%;
     position: relative; /* needed for the overlay */
-    background-image: url("/images/photos/banner.png");
+    background-image: url("images/photos/big-ben-1.jpg");
     background-size: cover;
     background-position: center;
     display: flex;
